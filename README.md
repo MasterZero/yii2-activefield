@@ -12,7 +12,7 @@ Make sure you've correctly installed the [elfinder by zxbodya](https://github.co
 Either run
 
 ```
-$ composer require masterzero/yii2-activefield
+$ composer require --prefer-dist masterzero/yii2-activefield
 ```
 
 or add
