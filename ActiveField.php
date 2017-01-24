@@ -8,6 +8,9 @@ use zxbodya\yii2\elfinder\TinyMceElFinder;
 use zxbodya\yii2\elfinder\ElFinderInput;
 
 
+
+
+
 class ActiveField extends \yii\widgets\ActiveField
 {
 	public $copyUrlClassName = 'url-copy-field';
@@ -32,9 +35,9 @@ class ActiveField extends \yii\widgets\ActiveField
 
 	public function elFinder()
 	{
-		return $this->widget(
+		return $this->widget(\sibds\widgets\InputFile::className()); /*$this->widget(
 		    ElFinderInput::className(),
-		    ['connectorRoute' => $this->form->elFinderConnector,] );
+		    ['connectorRoute' => $this->form->elFinderConnector,] );*/
 	}
 
 
@@ -50,6 +53,15 @@ class ActiveField extends \yii\widgets\ActiveField
 		    ]
 		);
 	}
+
+	public function CKEditor()
+	{
+		return $this->widget(\sibds\widgets\CKEditor::className(), ['options' => ['rows' => 6],]);
+	}
+
+
+
+	
 
 
 
